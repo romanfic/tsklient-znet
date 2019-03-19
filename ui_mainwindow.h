@@ -37,7 +37,7 @@ public:
     QWidget *centralWidget;
     QTabWidget *tabWidget;
     QWidget *tab;
-    QWidget *widget;
+    QWidget *layoutWidget;
     QGridLayout *gridLayout;
     QLineEdit *TSPassword;
     QLabel *label;
@@ -49,7 +49,7 @@ public:
     QLabel *label_5;
     QWidget *tab_2;
     QLabel *LabelIP;
-    QWidget *widget1;
+    QWidget *layoutWidget1;
     QHBoxLayout *horizontalLayout;
     QPushButton *pushButton;
     QListWidget *listWidget;
@@ -81,55 +81,55 @@ public:
         tabWidget->setGeometry(QRect(6, 179, 381, 301));
         tab = new QWidget();
         tab->setObjectName(QStringLiteral("tab"));
-        widget = new QWidget(tab);
-        widget->setObjectName(QStringLiteral("widget"));
-        widget->setGeometry(QRect(10, 50, 351, 171));
-        gridLayout = new QGridLayout(widget);
+        layoutWidget = new QWidget(tab);
+        layoutWidget->setObjectName(QStringLiteral("layoutWidget"));
+        layoutWidget->setGeometry(QRect(10, 50, 351, 171));
+        gridLayout = new QGridLayout(layoutWidget);
         gridLayout->setSpacing(6);
         gridLayout->setContentsMargins(11, 11, 11, 11);
         gridLayout->setObjectName(QStringLiteral("gridLayout"));
         gridLayout->setContentsMargins(0, 0, 0, 0);
-        TSPassword = new QLineEdit(widget);
+        TSPassword = new QLineEdit(layoutWidget);
         TSPassword->setObjectName(QStringLiteral("TSPassword"));
         TSPassword->setMinimumSize(QSize(113, 0));
         TSPassword->setEchoMode(QLineEdit::Password);
 
         gridLayout->addWidget(TSPassword, 2, 1, 1, 1);
 
-        label = new QLabel(widget);
+        label = new QLabel(layoutWidget);
         label->setObjectName(QStringLiteral("label"));
 
         gridLayout->addWidget(label, 0, 0, 1, 1);
 
-        ComboTServer = new QComboBox(widget);
+        ComboTServer = new QComboBox(layoutWidget);
         ComboTServer->setObjectName(QStringLiteral("ComboTServer"));
 
         gridLayout->addWidget(ComboTServer, 0, 1, 1, 1);
 
-        label_3 = new QLabel(widget);
+        label_3 = new QLabel(layoutWidget);
         label_3->setObjectName(QStringLiteral("label_3"));
         label_3->setMinimumSize(QSize(58, 0));
 
         gridLayout->addWidget(label_3, 1, 0, 1, 1);
 
-        TSUsername = new QLineEdit(widget);
+        TSUsername = new QLineEdit(layoutWidget);
         TSUsername->setObjectName(QStringLiteral("TSUsername"));
         TSUsername->setMinimumSize(QSize(113, 0));
 
         gridLayout->addWidget(TSUsername, 1, 1, 1, 1);
 
-        label_4 = new QLabel(widget);
+        label_4 = new QLabel(layoutWidget);
         label_4->setObjectName(QStringLiteral("label_4"));
         label_4->setMinimumSize(QSize(58, 0));
 
         gridLayout->addWidget(label_4, 2, 0, 1, 1);
 
-        ComboDomain = new QComboBox(widget);
+        ComboDomain = new QComboBox(layoutWidget);
         ComboDomain->setObjectName(QStringLiteral("ComboDomain"));
 
         gridLayout->addWidget(ComboDomain, 3, 1, 1, 1);
 
-        label_5 = new QLabel(widget);
+        label_5 = new QLabel(layoutWidget);
         label_5->setObjectName(QStringLiteral("label_5"));
         label_5->setMinimumSize(QSize(58, 0));
 
@@ -141,20 +141,20 @@ public:
         LabelIP = new QLabel(tab_2);
         LabelIP->setObjectName(QStringLiteral("LabelIP"));
         LabelIP->setGeometry(QRect(170, 40, 191, 31));
-        widget1 = new QWidget(tab_2);
-        widget1->setObjectName(QStringLiteral("widget1"));
-        widget1->setGeometry(QRect(20, 20, 352, 101));
-        horizontalLayout = new QHBoxLayout(widget1);
+        layoutWidget1 = new QWidget(tab_2);
+        layoutWidget1->setObjectName(QStringLiteral("layoutWidget1"));
+        layoutWidget1->setGeometry(QRect(20, 20, 352, 101));
+        horizontalLayout = new QHBoxLayout(layoutWidget1);
         horizontalLayout->setSpacing(6);
         horizontalLayout->setContentsMargins(11, 11, 11, 11);
         horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
         horizontalLayout->setContentsMargins(0, 0, 0, 0);
-        pushButton = new QPushButton(widget1);
+        pushButton = new QPushButton(layoutWidget1);
         pushButton->setObjectName(QStringLiteral("pushButton"));
 
         horizontalLayout->addWidget(pushButton);
 
-        listWidget = new QListWidget(widget1);
+        listWidget = new QListWidget(layoutWidget1);
         listWidget->setObjectName(QStringLiteral("listWidget"));
 
         horizontalLayout->addWidget(listWidget);
@@ -169,7 +169,7 @@ public:
         label_6->setScaledContents(true);
         label_7 = new QLabel(tab_3);
         label_7->setObjectName(QStringLiteral("label_7"));
-        label_7->setGeometry(QRect(150, 20, 201, 191));
+        label_7->setGeometry(QRect(140, 30, 211, 181));
         tabWidget->addTab(tab_3, QString());
         ButtonConnect = new QPushButton(centralWidget);
         ButtonConnect->setObjectName(QStringLiteral("ButtonConnect"));
@@ -229,12 +229,12 @@ public:
          << QApplication::translate("MainWindow", "csad.cz", Q_NULLPTR)
         );
         label_5->setText(QApplication::translate("MainWindow", "Dom\303\251na", Q_NULLPTR));
-        tabWidget->setTabText(tabWidget->indexOf(tab), QApplication::translate("MainWindow", "TS Client", Q_NULLPTR));
+        tabWidget->setTabText(tabWidget->indexOf(tab), QApplication::translate("MainWindow", "TS Klient", Q_NULLPTR));
         LabelIP->setText(QString());
         pushButton->setText(QApplication::translate("MainWindow", "Zjisti IP", Q_NULLPTR));
         tabWidget->setTabText(tabWidget->indexOf(tab_2), QApplication::translate("MainWindow", "Lok\303\241ln\303\255 info", Q_NULLPTR));
         label_6->setText(QString());
-        label_7->setText(QApplication::translate("MainWindow", "<html><head/><body><p><span style=\" font-size:14pt; font-weight:600;\">\305\275D syst\303\251my, s.r.o.</span></p><p>t\305\231\303\255da Tom\303\241\305\241e Bati 258, Louky</p><p>76302 Zl\303\255n</p><p>I\304\214 29204640 DI\304\214 CZ29204640</p><p>Autor Roman Fic</p><p>Helpdesk podpora@zdsystemy.cz</p></body></html>", Q_NULLPTR));
+        label_7->setText(QApplication::translate("MainWindow", "<html><head/><body><p><span style=\" font-size:14pt; font-weight:600;\">\305\275D syst\303\251my, s.r.o.</span></p><p>t\305\231\303\255da Tom\303\241\305\241e Bati 258, Louky</p><p>76302 Zl\303\255n</p><p>I\304\214 29204640 DI\304\214 CZ29204640</p><p>Autor: Roman Fic</p><p>Helpdesk: podpora@zdsystemy.cz</p></body></html>", Q_NULLPTR));
         tabWidget->setTabText(tabWidget->indexOf(tab_3), QApplication::translate("MainWindow", "O aplikaci", Q_NULLPTR));
         ButtonConnect->setText(QApplication::translate("MainWindow", "P\305\231ipojit", Q_NULLPTR));
         label_2->setText(QApplication::translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:36pt; font-weight:600;\">TS Klient </span><span style=\" font-size:36pt; font-weight:600; vertical-align:super;\">Z-NET</span></p></body></html>", Q_NULLPTR));

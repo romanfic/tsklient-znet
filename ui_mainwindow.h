@@ -14,6 +14,7 @@
 #include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
+#include <QtWidgets/QCheckBox>
 #include <QtWidgets/QComboBox>
 #include <QtWidgets/QGridLayout>
 #include <QtWidgets/QHBoxLayout>
@@ -47,6 +48,8 @@ public:
     QLabel *label_4;
     QComboBox *ComboDomain;
     QLabel *label_5;
+    QWidget *tab_4;
+    QCheckBox *TSFlashdisk;
     QWidget *tab_2;
     QLabel *LabelIP;
     QWidget *layoutWidget1;
@@ -136,6 +139,12 @@ public:
         gridLayout->addWidget(label_5, 3, 0, 1, 1);
 
         tabWidget->addTab(tab, QString());
+        tab_4 = new QWidget();
+        tab_4->setObjectName(QStringLiteral("tab_4"));
+        TSFlashdisk = new QCheckBox(tab_4);
+        TSFlashdisk->setObjectName(QStringLiteral("TSFlashdisk"));
+        TSFlashdisk->setGeometry(QRect(20, 20, 181, 22));
+        tabWidget->addTab(tab_4, QString());
         tab_2 = new QWidget();
         tab_2->setObjectName(QStringLiteral("tab_2"));
         LabelIP = new QLabel(tab_2);
@@ -230,6 +239,8 @@ public:
         );
         label_5->setText(QApplication::translate("MainWindow", "Dom\303\251na", Q_NULLPTR));
         tabWidget->setTabText(tabWidget->indexOf(tab), QApplication::translate("MainWindow", "TS Klient", Q_NULLPTR));
+        TSFlashdisk->setText(QApplication::translate("MainWindow", "P\305\231esm\304\233rovat fashdisk", Q_NULLPTR));
+        tabWidget->setTabText(tabWidget->indexOf(tab_4), QApplication::translate("MainWindow", "Nastaven\303\255", Q_NULLPTR));
         LabelIP->setText(QString());
         pushButton->setText(QApplication::translate("MainWindow", "Zjisti IP", Q_NULLPTR));
         tabWidget->setTabText(tabWidget->indexOf(tab_2), QApplication::translate("MainWindow", "Lok\303\241ln\303\255 info", Q_NULLPTR));
